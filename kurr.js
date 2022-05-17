@@ -5998,7 +5998,7 @@ break
 					await reply('Done gan')
 				break
  case 'sticker': case 's': case 'stickergif': case 'sgif': case 'stikerin': {
-  if (!quoted) throw `Reply Video/Image Dengan Caption ${prefix + command}`
+  if (!isOwner) throw `Reply Video/Image Dengan Caption ${prefix + command}`
   reply(mess.wait)
   if (/image/.test(mime)) {
   let media = await quoted.download()
